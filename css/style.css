@@ -1,0 +1,372 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      background: #f7f5ef;
+      color: #34483c;
+      line-height: 1.7;
+    }
+
+    header {
+  text-align: center;
+  padding: 24px 0 32px;
+}
+
+.heading-line {
+  height: 1px;
+  width: 65%;
+  margin: 0 auto;
+  background: #cbd5c8;
+}
+
+.logo {
+  font-size: 38px;
+  margin: 18px 0 4px;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  color: #45664f;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #45664f;
+  margin: 6px 0 2px;
+}
+
+.description {
+  font-size: 13px;
+  color: #788579;
+  margin: 8px 0 20px;
+}
+
+    header p {
+      color: #788579;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin: 30px 0 14px;
+    }
+
+    .panel {
+      background: #fffefa;
+      border: 1px solid #e8e4d9;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 14px #34483c0a;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d9ddd3;
+      border-radius: 8px;
+      background: #fff;
+      color: #34483c;
+      font-size: 15px;
+    }
+
+    input:focus {
+      outline: 2px solid #9ab49c;
+      border-color: #52765d;
+    }
+
+    textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d8d8d0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 15px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin: 12px 8px 0 0;
+      font-size: 13px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #book-form button[type="submit"] {
+      display: block;
+      width: 100%;
+      margin-top: 24px;
+      padding: 13px;
+      background: #45664f;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+
+    #logout-button {
+    background: #e5ede3;
+    color: #355740;
+    border: 1px solid #cbd8c8;
+    }
+
+    
+
+    #book-list button {
+      margin-top: 12px;
+      margin-right: 8px;
+    }
+
+    #book-list button:first-of-type {
+      background: #e5ede3;
+      color: #355740;
+    }
+
+    #book-list button:last-of-type {
+      background: #f5e7e1;
+      color: #8a5144;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      color: #92978e;
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 14px;
+      }
+
+      .panel {
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+    }
+
+
+/* 書籍一覧 */
+#list-panel {
+  margin-top: 20px;
+}
+
+#book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 1冊ごとのカード */
+#book-list li {
+  background: #fffefa;
+  border: 1px solid #e8e4d9;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  box-shadow: 0 3px 10px #34483c0a;
+}
+
+/* 書籍タイトル */
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: -20px -20px 14px;
+  padding: 14px 18px;
+  background: #e5ede3;
+  color: #355740;
+  border-radius: 14px 14px 0 0;
+  border: 1px solid #e5ede3;
+}
+
+/* 書籍情報 */
+.book-info {
+  font-size: 14px;
+  color: #788579;
+  margin: 5px 0;
+}
+
+/* ボタン部分 */
+.book-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.book-actions button {
+  margin: 0;
+  min-width: 80px;
+}
+
+.book-edit {
+  background: #e5ede3;
+  color: #355740;
+}
+
+.book-delete {
+  background: #f5e7e1;
+  color: #8a5144;
+}
+
+/* 新規登録リンク */
+.register-link {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.register-link a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #45664f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.register-link a:hover {
+  opacity: 0.8;
+}
+
+/* ログアウトエリアと登録フォームの間隔 */
+#logout-area {
+  margin-bottom: 24px;
+}
+
+/* ヘッダー内のログアウトボタン */
+header {
+  position: relative;
+  padding-top: 0;
+}
+
+#logout-area {
+  position: static;
+  text-align: right;
+  margin-bottom: 16px;
+
+}
+
+header {
+  position: relative;
+}
+.search-area {
+  position: relative;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.search-area input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  line-height: 1;
+  z-index: 1;
+}
+
+/* 新規登録ボタンと検索窓の間隔を調整 */
+header {
+  padding-bottom: 10px;
+}
+
+#list-panel {
+  margin-top: 8px;
+}
+
+.search-area {
+  margin-top: 5px;
+}
+
+/* 検索窓 */
+.search-area {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto 20px;
+}
+
+.search-area input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 10px 45px 10px 15px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 23px;
+  transform: translateY(-50%);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.search-area {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto 20px;
+}
+
+.search-area input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+/* タブと一覧画面をつなげる */
+#tab-area {
+  gap: 0;
+}
+
+#tab-area button {
+  border-radius: 8px 8px 0 0;
+}
+
+/* 一覧画面の上部をタブにつなげる */
+#list-area {
+  margin-top: 0;
+  border-radius: 0 0 14px 14px;
+}

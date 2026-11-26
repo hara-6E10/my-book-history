@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本を新しく登録 | My Little Library</title>
+  <link rel="stylesheet" href="css/style.css">
+
+
+  
+</head>
+
+<body>
+        <header>
+            <div id="logout-area" hidden style="text-align: right;">
+                <button type="button" id="logout-button">
+                  ログアウト
+                </button>
+              </div>
+          <div class="logo">📚</div>
+          <h1>本を新しく登録</h1>
+          <p>新しい本を読書履歴に追加しましょう。</p>
+        </header>
+      
+        
+      
+        <section class="panel" id="book-panel" hidden>
+          <form id="book-form">
+            <label for="title">書名</label>
+            <input id="title" placeholder="本のタイトルを入力" required>
+
+            <label for="author">著者名</label>
+            <input id="author" placeholder="著者名を入力">
+      
+            <label for="isbn">ISBN（13桁）</label>
+            <input id="isbn" inputmode="numeric" placeholder="9784529063852">
+      
+            <label for="borrowDate">貸出日</label>
+            <input id="borrowDate" type="date" required>
+      
+            <label for="memo">メモ</label>
+            <textarea
+              id="memo"
+              rows="4"
+              placeholder="本の感想や気になったことなど">
+            </textarea>
+      
+            <button type="submit">本を登録する</button>
+          </form>
+        </section>
+      
+        <p>
+          <a href="history.html">← 読書履歴一覧に戻る</a>
+        </p>
+      
+        <footer>
+          My Little Library · 読書の記録
+        </footer>
+      
+        <script src="history.bundle.js"></script>
+    
+</body>
+</html>

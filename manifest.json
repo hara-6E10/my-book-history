@@ -1,0 +1,43 @@
+
+{
+  "manifest_version": 3,
+  "name": "わたしの貸出履歴",
+  "version": "1.0",
+  "description": "福岡市総合図書館の蔵書ページに自分の貸出履歴を表示します",
+
+  "permissions": ["storage"],
+
+  "background": {
+    "service_worker": "background.bundle.js",
+    "type": "module"
+  },
+
+  "options_page": "history.html",
+
+  "host_permissions": [
+    "https://www.toshokan.city.fukuoka.lg.jp/*",
+    "https://identitytoolkit.googleapis.com/*",
+    "https://securetoken.googleapis.com/*",
+    "https://firestore.googleapis.com/*",
+    "https://firebaseinstallations.googleapis.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.toshokan.city.fukuoka.lg.jp/winj/opac/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["history.html", "history.js", "style.css"],
+      "matches": [
+        "https://www.toshokan.city.fukuoka.lg.jp/*"
+      ]
+    }
+  ]
+}

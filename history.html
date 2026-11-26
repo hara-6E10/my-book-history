@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>わたしの貸出履歴</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div id="logout-area" hidden>
+      <button type="button" id="logout-button">ログアウト</button>
+    </div>
+    <div class="heading-line"></div>
+    <div class="logo">📚</div>
+    <h1>MY BOOKSHELF</h1>
+    <p class="subtitle">わたしの貸出履歴</p>
+    <p class="description">借りた本を、心地よく記録しよう。</p>
+    <div class="heading-line"></div>
+    <div class="register-link">
+      <a href="register.html">＋ 新しい本を登録する</a>
+    </div>
+  </header>
+  
+  
+
+  <section class="panel" id="login-panel">
+    <h2>🔐 ログイン</h2>
+  
+    <form id="login-form">
+      <label for="email">メールアドレス</label>
+      <input id="email" type="email" required>
+  
+      <label for="password">パスワード</label>
+      <input id="password" type="password" required>
+  
+      <button type="submit">ログイン</button>
+    </form>
+  
+    <p id="login-error"></p>
+  </section>
+  
+ 
+  <section id="list-panel" hidden>
+
+    <!-- 検索窓 -->
+    <div class="search-area">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="タイトル・著者名で検索"
+      >
+      <span class="search-icon">🔍</span>
+    </div>
+  
+    <h2>📖 登録した本</h2>
+    <ul id="book-list"></ul>
+  
+  </section>
+
+  <footer>
+    My Little Library · 読書の記録
+  </footer>
+
+  <script src="history.bundle.js"></script>
+  
+
+</body>
+</html>

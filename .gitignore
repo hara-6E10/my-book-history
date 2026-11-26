@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Firebase local settings
+.firebase/
+.firebaserc
+
+# OS files
+.DS_Store
+
+# Local environment variables
+.env
+.env.*
+
+# Private keys
+*.pem
+*.key
+serviceAccount*.json
+history_backup.js
