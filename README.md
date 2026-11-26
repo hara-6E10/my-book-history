@@ -49,3 +49,10 @@ https://my-book-history-d8b8e.web.app/
 - UI・操作性の改善
 - 検索機能の拡充
 - 機能の追加・改善
+
+## ■ アプリ画面
+
+### スマートフォン版
+
+![アプリ画面](mobile/screenshots/app-mobile.png)
+
