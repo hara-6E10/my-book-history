@@ -52,7 +52,10 @@ https://my-book-history-d8b8e.web.app/
 
 ## ■ アプリ画面
 
-### スマートフォン版
+### ログイン画面
 
-![アプリ画面](mobile/screenshots/app-mobile.png)
+![ログイン画面](mobile/screenshots/app-mobile.png)
 
+### 読書履歴一覧画面
+
+![読書履歴一覧画面](mobile/screenshots/app-bookshelf.png)
